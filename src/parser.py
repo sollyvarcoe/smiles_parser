@@ -158,12 +158,15 @@ def _parse(tokens: Iterable[str]) -> Molecule:
                     case '=':
                         current_bond_type = BondType.DOUBLE
 
+    # TODO: Check if all rings and branches are closed at end of string
+    # TODO: Check final token is sensible (no bond/branch start as last token?)
+
     return mol 
 
 """
 Create a molecule from a valid smiles string.
 
-Note: Only a subset of smiles syntax is supported
+Note: Only a subset of smiles syntax is supported.
 """
 def smiles_to_molecule(smiles_str: str) -> Molecule:
 
