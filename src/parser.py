@@ -53,8 +53,8 @@ class SmileType(Enum):
 """
 Maps valid tokens to a given SmileType
 
-Throws:
-    ValueError on unsupported tokens
+    Raises:
+        ValueError on unsupported tokens
 """
 def _token_to_type(token: str) -> SmileType:
     if token in atoms:
@@ -70,6 +70,7 @@ def _token_to_type(token: str) -> SmileType:
 
 """
 Splits a smiles string into valid tokens
+
     Raises:
         ValueError if an unsupported token is encountered.  
 """
@@ -101,7 +102,7 @@ def _tokenise(smiles_string: str) -> Iterable[str]:
 Convert a stream of tokens into a Molecule
 
     Raises:
-        ValueError if an unsupported token is encountered.  
+        ValueError on ill formed string.   
 """
 def _parse(tokens: Iterable[str]) -> Molecule:
 
