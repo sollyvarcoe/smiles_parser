@@ -1,9 +1,9 @@
 
 
 from enum import Enum
-from typing import Iterable, Type
+from typing import Iterable
 from rdkit.Chem.rdchem import RWMol, Atom, BondType
-from rdkit.Chem import Draw, MolToSmiles, MolFromSmiles
+from rdkit.Chem import MolToSmiles
 from examples import molecule_examples
 
 # All supported tokens
