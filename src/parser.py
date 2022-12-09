@@ -7,7 +7,7 @@ from rdkit.Chem import MolToSmiles
 from examples import molecule_examples
 
 # All supported tokens
-# TODO: Support all tokens
+# TODO: Full support of SMILES syntax 
 
 atoms: tuple[str] = ('C', 'N', 'O', 'F', 'Cl', "Br")
 branch: tuple[str] = ('(', ')')
